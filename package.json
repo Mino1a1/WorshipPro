@@ -1,0 +1,58 @@
+{
+  "name": "worship-studio-pro",
+  "version": "0.8.0",
+  "private": true,
+  "description": "Worship Studio Pro - professional worship presentation, menus, light/dark appearance, word view, logo presets, Bible, OCR PDF and VSD N3 support",
+  "main": "electron/main.cjs",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron .",
+    "package": "electron-builder",
+    "package:win": "electron-builder --win nsis",
+    "package:mac": "electron-builder --mac dmg",
+    "test": "node --test"
+  },
+  "devDependencies": {
+    "electron": "^45.3.2",
+    "electron-builder": "^26.18.1"
+  },
+  "build": {
+    "appId": "it.worshipstudiopro.app",
+    "productName": "Worship Studio Pro",
+    "asar": true,
+    "files": [
+      "app/**/*",
+      "electron/**/*",
+      "package.json",
+      "README.md",
+      "LICENSES.md",
+      "docs/**/*"
+    ],
+    "directories": {
+      "output": "release"
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ]
+    },
+    "mac": {
+      "target": [
+        "dmg"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "dependencies": {
+    "pdf-parse": "^1.1.1",
+    "pdfjs-dist": "^4.10.38",
+    "@napi-rs/canvas": "^0.1.68",
+    "tesseract.js": "^6.0.1"
+  }
+}

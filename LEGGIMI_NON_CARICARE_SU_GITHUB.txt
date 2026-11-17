@@ -1,0 +1,7 @@
+CONTENUTO LOCALE PRIVATO — NON CARICARE SU GITHUB / GITHUB PAGES
+
+Questo file è derivato dal file PDB della Bibbia fornito nella conversazione. Mantiene nel progetto il nome/attribuzione della traduzione; non rimuovere né alterare le informazioni di provenienza e copyright.
+
+Per fare una build Windows locale che includa questo contenuto, lascia questa cartella accanto a `1_CARICA_SU_GITHUB` ed esegui `build-windows.ps1` dalla cartella `1_CARICA_SU_GITHUB`. Lo script copierà il JSON in `app/nr94.json` prima della compilazione.
+
+Non pubblicare il testo integrale su un repository o su GitHub Pages senza aver verificato che la licenza/autorizzazione consenta la distribuzione pubblica. Il file è escluso dal repository con `.gitignore` e dal workflow Pages.
